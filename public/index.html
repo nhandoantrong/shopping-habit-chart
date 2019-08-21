@@ -1,41 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
-        integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+      integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <style>
-        canvas {
-            margin: 15px 0;
-        }
+      canvas {
+        margin: 15px 0;
+      }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-
-        }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .change-max-size{
+          width: 100px;
+          position: fixed;
+          top: 50%;
+          left: 15px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1 style="text-align: center">Doubled Stacked Column Chart for Shopping Habit research</h1>
+  <body>
+    <h1 style="text-align: center">
+      Doubled Stacked Column Chart for Shopping Habit research
+    </h1>
 
-    <div class="chart-container" id="myChart" style="position: relative; height:700px; width:700px; margin: 15px auto">
+    <div class="change-max-size">
+        <div class="form-group">
+            <label for="change-max-size" >Chart max size</label>
+            <select class="form-control" id="change-max-size" >
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option selected="selected">40</option>
+              <option>50</option>
+            </select>
+          </div>
     </div>
 
+    <div
+      class="chart-container"
+      id="myChart"
+      style="position: relative; height:700px; width:700px; margin: 15px auto; max-width: 90vw;"
+    ></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw="
+      crossorigin="anonymous"
+    ></script>
     <script src="./dist/main.js" type="module"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -50,7 +100,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-    </script>
-</body>
-
+    </script> -->
+  </body>
 </html>
