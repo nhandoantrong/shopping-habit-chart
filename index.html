@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+        integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        canvas {
+            margin: 15px 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center">Doubled Stacked Column Chart for Shopping Habit research</h1>
+
+    <div class="chart-container" id="myChart" style="position: relative; height:700px; width:700px; margin: 15px auto">
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <script src="./dist/main.js" type="module"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCzZtRvF-qOpkywCJfp_aH1VothTAgGBRw",
+            authDomain: "hanah-shopping-habit-chart.firebaseapp.com",
+            databaseURL: "https://hanah-shopping-habit-chart.firebaseio.com",
+            projectId: "hanah-shopping-habit-chart",
+            storageBucket: "",
+            messagingSenderId: "1099443919939",
+            appId: "1:1099443919939:web:1ebfe48549a2d686"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+
+</html>
